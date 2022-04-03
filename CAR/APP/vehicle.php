@@ -15,15 +15,60 @@ class Car extends Vehicle
     /**
      * Position of vehicle Y(Vertical)
      *
-     * @var int
+     * @var float 
      */
     public $y;
 
     /**
      * Position of vehicle X(Horizontal)
      *
-     * @var int
+     * @var float
      */
     public $x;
+
+    /**
+     * vehicle constructor
+     *
+     * @param float $x X-position
+     * @param float $y Y-position
+     */
+    public function __construct(float $x, float $y)
+    {
+        $this->chDirect($x);
+    }
+    /**
+     * change direct of car 
+     *
+     * @param float x-position
+     */
+    public function chDirect(float $x): float
+    {
+      if($x = $x){
+        $x++
+      }
+      else{
+        $x--
+      }
+        return $this->$x ;
+    }
+      /**
+     * X position getter
+     *
+     * @return float x-position
+     */
+    public function getX(): float
+    {
+        return $this->x;
+    }
+    /**
+     * Y position getter
+     *
+     * @return float y-position
+     */
+    public function getY(): float
+    {
+        return $this->y;
+    }
+
 
   }

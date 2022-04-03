@@ -14,4 +14,4 @@ spl_autoload_register(function (string $className) {
     }
 });
 
-$Audi = new vehicle(0, 0, 0, 0);
+$Audi = new vehicle(100, 200, 200, 56, 31);
